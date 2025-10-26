@@ -6,9 +6,8 @@
 #include <sstream>
 using namespace std;
 
-// ===============================
+
 // Classe de base abstraite : Plugin
-// ===============================
 class Plugin {
 public:
     virtual string nom() const = 0;
@@ -19,9 +18,9 @@ public:
     static unique_ptr<Plugin> creerPlugin(const string& type);
 };
 
-// ===============================
+
 // Plugin 1 : Correcteur orthographique
-// ===============================
+
 class CorrecteurOrthographique : public Plugin {
 public:
     string nom() const override { return "Correcteur orthographique"; }
@@ -43,9 +42,8 @@ public:
     }
 };
 
-// ===============================
 // Plugin 2 : Traducteur anglais
-// ===============================
+
 class TraducteurAnglais : public Plugin {
 public:
     string nom() const override { return "Traducteur anglais"; }
@@ -66,9 +64,9 @@ public:
     }
 };
 
-// ===============================
+
 // Plugin 3 : Analyseur de style
-// ===============================
+
 class AnalyseurStyle : public Plugin {
 public:
     string nom() const override { return "Analyseur de style"; }
@@ -88,14 +86,12 @@ public:
         if (longues > 0)
             resultat += "\n⚠ " + to_string(longues) + " phrase(s) trop longue(s) détectée(s).";
         else
-            resultat += "\n✅ Style concis.";
+            resultat += "\n Style concis.";
         return resultat;
     }
 };
 
-// ===============================
 // Factory de création de plugins
-// ===============================
 unique_ptr<Plugin> Plugin::creerPlugin(const string& type) {
     if (type == "correcteur") return make_unique<CorrecteurOrthographique>();
     if (type == "traducteur") return make_unique<TraducteurAnglais>();
@@ -103,9 +99,7 @@ unique_ptr<Plugin> Plugin::creerPlugin(const string& type) {
     return nullptr;
 }
 
-// ===============================
 // Fonction principale
-// ===============================
 int main() {
     cout << "=== Système de plugins de traitement de texte ===" << endl;
     cout << "Entrez un texte : ";
