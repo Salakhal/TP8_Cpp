@@ -2,7 +2,7 @@
 
  #  Exercice 1 : Gestion de périphériques audio
 
-## 🎯 Objectifs pédagogiques
+##  Objectifs pédagogiques
 - Utiliser une **interface abstraite** pour unifier l’accès à différents périphériques audio.  
 - Illustrer la **liaison dynamique** à travers un tableau de pointeurs.  
 - Montrer la nécessité d’un **destructeur virtuel** pour éviter les fuites mémoire.
@@ -19,10 +19,7 @@ Tous possèdent les mêmes opérations (`ouvrir`, `jouer`, `fermer`), mais avec 
 
 ---
 
-
----
-
-## ⚙️ Fonctionnement
+##  Fonctionnement
 1. `SortieAudio` définit les méthodes virtuelles pures.  
 2. Chaque sous-classe implémente ses propres versions.  
 3. Le tableau de pointeurs permet d’appeler les méthodes de manière polymorphe.  
@@ -55,6 +52,8 @@ Destruction SortieAudio
 ```
 
 
+
+<img width="831" height="615" alt="image" src="https://github.com/user-attachments/assets/142d606b-7c80-4ce9-a438-65cd8ea56b36" />
 
 
 
@@ -92,6 +91,7 @@ Point (1, 1, 0) -> Intensité totale : 1.89956
 Point (0, 3, 0) -> Intensité totale : 0.8
 
 ```
+<img width="881" height="200" alt="image" src="https://github.com/user-attachments/assets/fb848c6b-38d4-4498-92ea-1ecce96f54cd" />
 
 
 #  Exercice 3 : Système de plugins de traitement de texte
@@ -138,3 +138,5 @@ hello le world, thank you pour ça démonstration.
 
 === Traitement terminé ===
 ```
+
+<img width="967" height="497" alt="image" src="https://github.com/user-attachments/assets/ee523faf-7fdd-43cc-a347-61d26c3bc82a" />
