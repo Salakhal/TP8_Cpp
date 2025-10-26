@@ -4,9 +4,7 @@
 #include <cmath>
 using namespace std;
 
-// ===============================
 // Structure 3D simple
-// ===============================
 struct Vec3 {
     float x, y, z;
 
@@ -35,18 +33,14 @@ struct Vec3 {
     }
 };
 
-// ===============================
 // Classe abstraite : Lumiere
-// ===============================
 class Lumiere {
 public:
     virtual float intensite(const Vec3& position) const = 0;
     virtual ~Lumiere() = default;
 };
 
-// ===============================
 // Lumière directionnelle
-// ===============================
 class LumiereDirectionnelle : public Lumiere {
     Vec3 direction;
     float couleur; // intensité de base
@@ -61,9 +55,7 @@ public:
     }
 };
 
-// ===============================
 // Lumière ponctuelle
-// ===============================
 class LumierePonctuelle : public Lumiere {
     Vec3 position;
     float attenuation; // facteur de diminution avec la distance
@@ -79,9 +71,7 @@ public:
     }
 };
 
-// ===============================
 // Lumière spot
-// ===============================
 class LumiereSpot : public Lumiere {
     Vec3 position;
     Vec3 direction;
@@ -105,9 +95,7 @@ public:
     }
 };
 
-// ===============================
 // Fonction de calcul global
-// ===============================
 float calculerEclairage(const Vec3& point,
                         const vector<unique_ptr<Lumiere>>& lumieres) {
     float total = 0.0f;
@@ -116,9 +104,7 @@ float calculerEclairage(const Vec3& point,
     return total;
 }
 
-// ===============================
 // Fonction principale
-// ===============================
 int main() {
     vector<unique_ptr<Lumiere>> lumieres;
 
