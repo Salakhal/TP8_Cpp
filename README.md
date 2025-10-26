@@ -51,7 +51,9 @@ Destruction SortieAudio
 
 ```
 
-
+ ##  Exemple d’exécution (image)
+ 
+Voici un exemple de l'exécution du programme (screenshot) : 
 
 <img width="831" height="615" alt="image" src="https://github.com/user-attachments/assets/142d606b-7c80-4ce9-a438-65cd8ea56b36" />
 
@@ -91,6 +93,10 @@ Point (1, 1, 0) -> Intensité totale : 1.89956
 Point (0, 3, 0) -> Intensité totale : 0.8
 
 ```
+ ##  Exemple d’exécution (image)
+ 
+Voici un exemple de l'exécution du programme (screenshot) : 
+
 <img width="881" height="200" alt="image" src="https://github.com/user-attachments/assets/fb848c6b-38d4-4498-92ea-1ecce96f54cd" />
 
 
@@ -138,5 +144,8 @@ hello le world, thank you pour ça démonstration.
 
 === Traitement terminé ===
 ```
+ ##  Exemple d’exécution (image)
+ 
+Voici un exemple de l'exécution du programme (screenshot) : 
 
 <img width="967" height="497" alt="image" src="https://github.com/user-attachments/assets/ee523faf-7fdd-43cc-a347-61d26c3bc82a" />
