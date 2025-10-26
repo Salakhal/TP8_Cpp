@@ -2,9 +2,8 @@
 #include <string>
 using namespace std;
 
-// ===============================
+
 // Classe de base abstraite
-// ===============================
 class SortieAudio {
 public:
     // Méthodes virtuelles pures (interface)
@@ -18,9 +17,7 @@ public:
     }
 };
 
-// ===============================
 // Classe dérivée : HautParleur
-// ===============================
 class HautParleur : public SortieAudio {
 public:
     void ouvrir() override {
@@ -37,9 +34,7 @@ public:
     }
 };
 
-// ===============================
 // Classe dérivée : Casque Bluetooth
-// ===============================
 class CasqueBT : public SortieAudio {
 public:
     void ouvrir() override {
@@ -56,9 +51,7 @@ public:
     }
 };
 
-// ===============================
 // Classe dérivée : Sortie HDMI
-// ===============================
 class SortieHDMI : public SortieAudio {
 public:
     void ouvrir() override {
@@ -75,9 +68,7 @@ public:
     }
 };
 
-// ===============================
 // Fonction polymorphe
-// ===============================
 void tester(SortieAudio* sortie) {
     sortie->ouvrir();
     sortie->jouer("Musique.mp3");
@@ -85,9 +76,7 @@ void tester(SortieAudio* sortie) {
     cout << "-----------------------------" << endl;
 }
 
-// ===============================
 // Fonction principale
-// ===============================
 int main() {
     const int N = 3;
     SortieAudio* sorties[N];
